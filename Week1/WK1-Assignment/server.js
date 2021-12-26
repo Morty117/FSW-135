@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
+const mongoose = require('mongoose')
 const bountyHunterRouter = require('./routes/bounties')
 const PORT = 9000
 
