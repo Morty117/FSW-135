@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 // bounty Schema
-const bountySchema = newSchema({
+const bountySchema = Schema({
     first: {
         type: String,
         required: true
