@@ -9,10 +9,12 @@ const issueSchema = new Schema({
     },
     upVote: {
         type: Number,
+        default: 0,
         required: false
     },
     downVote: {
         type: Number,
+        default: 0,
         required: false
     },
     user: {

@@ -15,7 +15,7 @@ export default function UserProvider(props){
 
     const login = (credentials) => {
         axios.post('/auth/login', credentials)
-            .then(res => console.log(res))
+            .then(res => setUserState({...userState, user: res.data.user, token: res.data.token}))
             .catch(err => console.dir(err.response.data.errMsg))
     }
     

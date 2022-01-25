@@ -57,42 +57,42 @@ issueRouter
     })
 
 // Put for votes
-    // .put('/downvote/:issueId', (req, res, next) => {
-    //     Issue.findOneAndUpdate(
-    //         {_id: req.params.issueId},
-    //         {
-    //             $inc: {
-    //                 downVote: -1,
-    //             }
-    //         },
-    //         { new: true},
-    //         (err, updatedIssue) => {
-    //             if(err){
-    //                 res.status(500)
-    //                 return next(err)
-    //               }
-    //               return res.status(201).send(updatedIssue)   
-    //         }
-    //     )
-    // })
-    // .put('/upvote/:issueId', (req, res, next) => {
-    //     Issue.findOneAndUpdate(
-    //         {_id: req.params.issueId},
-    //         {
-    //             $inc: {
-    //                 upVote: 1,
-    //             }
-    //         },
-    //         { new: true},
-    //         (err, updatedIssue) => {
-    //             if(err){
-    //                 res.status(500)
-    //                 return next(err)
-    //               }
-    //               return res.status(201).send(updatedIssue)   
-    //         }
-    //     )
-    // })
+    .put('/downvote/:issueId', (req, res, next) => {
+        Issue.findOneAndUpdate(
+            {_id: req.params.issueId},
+            {
+                $inc: {
+                    downVote: 1,
+                }
+            },
+            { new: true},
+            (err, updatedIssue) => {
+                if(err){
+                    res.status(500)
+                    return next(err)
+                  }
+                  return res.status(201).send(updatedIssue)   
+            }
+        )
+    })
+    .put('/upvote/:issueId', (req, res, next) => {
+        Issue.findOneAndUpdate(
+            {_id: req.params.issueId},
+            {
+                $inc: {
+                    upVote: 1,
+                }
+            },
+            { new: true},
+            (err, updatedIssue) => {
+                if(err){
+                    res.status(500)
+                    return next(err)
+                  }
+                  return res.status(201).send(updatedIssue)   
+            }
+        )
+    })
 
 // Delete
     .delete('/:issueId', (req, res, next) => {
