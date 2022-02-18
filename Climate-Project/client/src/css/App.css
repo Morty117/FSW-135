@@ -1,38 +1,49 @@
-.App {
+h1 {
   text-align: center;
+  font-size: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url(https://media.istockphoto.com/photos/global-warming-map-infographics-picture-id1330405263?b=1&k=20&m=1330405263&s=170667a&w=0&h=ZvCfF8l3p4nTaWQXYZvh24BB_i5bvGtqREv_pXiKzZ8=);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.issue{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: aliceblue;
+  border: solid;
+  margin: 0 25%;
 }
 
-.App-link {
-  color: #61dafb;
+.climate-title {
+  margin: 0px 0px 10px 0px;
+  padding: 5px;
+  background-color: #607D8B;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.issueform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.authform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+}
+
+.login-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

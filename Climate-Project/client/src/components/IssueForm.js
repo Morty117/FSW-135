@@ -25,7 +25,7 @@ export default function IssueForm({addIssue}){
     }
 
     return(
-        <div>
+        <div className="issueform">
             <form onSubmit={ handleSubmit }>
                 <input 
                     type="text"

@@ -35,7 +35,7 @@ export default function Auth(){
 
     return(
         <div>
-            <h1>Climate Action</h1>
+            <h1 className="climate-title">Climate Action</h1>
             { !toggle ?
                 <>
                     <AuthForm
@@ -45,7 +45,7 @@ export default function Auth(){
                         errMsg={ errMsg }
                         btnText="Sign Up"
                     />
-                    <button onClick={() => toggleForm()}>Already have an account?</button>
+                    <div className="login-signup"><button onClick={() => toggleForm()}>Already have an account?</button></div>
                 </>
 
                 :
@@ -58,7 +58,7 @@ export default function Auth(){
                         errMsg={ errMsg }
                         btnText="Login"
                     />
-                    <button onClick={() => toggleForm()}>Have issues? Sign Up</button>
+                    <div className="login-signup"><button onClick={() => toggleForm()}>Sign Up</button></div>
                 </>
             }
         </div>
